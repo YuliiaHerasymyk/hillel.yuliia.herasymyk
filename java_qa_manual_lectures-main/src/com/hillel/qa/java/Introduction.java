@@ -53,7 +53,7 @@ public class Introduction {
        // boolean c = a && b;
        // System.out.println(c);
 
-        // доробити  double t = 12;
+        // Доробити   double t = 12;
         //double normalt = 36.6;
         //if (t < normalt){
            // System.out.println("Ви маєте низьку температуру!");
