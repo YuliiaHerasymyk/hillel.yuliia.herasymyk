@@ -38,7 +38,32 @@ public class Introduction {
         Важливо розуміти що регістр в JAVA має значення, system.out.println("Hello world");
         не спрацює, тому що з маленької букви.
          */
-        System.out.println("Hello world");
+       // System.out.println("Hello world");
+//String country = "fdj";
+//int salary = 24;
+//double price = 50;
+
+        //   int a = 10;
+      //  int b = 5;
+     //   int c = a * b;
+      //  System. out. println(c);
+
+       // boolean a = true;
+      //  boolean b = false;
+       // boolean c = a && b;
+       // System.out.println(c);
+
+        // доробити  double t = 12;
+        //double normalt = 36.6;
+        //if (t < normalt){
+           // System.out.println("Ви маєте низьку температуру!");
+        //} else if (t == 36.6){
+         //   System.out.println("Ви здоровий!");
+        //} else if (t > 36.6){
+         //   System.out.println("Ви маєте високу температуру!");
+        //} else {
+         //   System.out.println("Ви ввели інші дані!");
+       // }
 
         // TODO: Створіть свій клас та виведіть там "QA це круто!"
     }
