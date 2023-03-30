@@ -1,5 +1,7 @@
 package com.hillel.qa.java.branching.homework;
 
+import java.util.Scanner;
+
 public class HomeWork4 {
     /**
      * <p style="font-size:12px">
@@ -18,6 +20,23 @@ public class HomeWork4 {
      */
     public static void main(String[] args) {
 
+            Scanner in = new Scanner(System.in);
 
+            System.out.println("Ввести довжину I сторони трикутника:");
+            double a = in.nextDouble();
+
+            System.out.println("Ввести довжину II сторони трикутника:");
+            double b = in.nextDouble();
+
+            System.out.println("Ввести довжину III сторони трикутника:");
+            double c = in.nextDouble();
+
+            if ((a + b > c) && (a + c > b) && (b + c > a)) {
+                System.out.println("Трикутник можливо побудувати");
+            } else {
+                System.out.println("Трикутник не можливо побудувати");
+                in.close();
+            }
+        }
     }
-}
+

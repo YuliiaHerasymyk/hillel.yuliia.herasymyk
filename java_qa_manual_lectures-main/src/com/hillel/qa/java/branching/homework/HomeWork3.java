@@ -22,6 +22,20 @@ public class HomeWork3 {
      * </p>
      */
     public static void main(String[] args) {
-
+        String payment_type = "card";
+        double cost = 20.00;
+switch (payment_type) {
+    case "cash":
+        System.out.println(cost);
+        break;
+    case "card":
+        System.out.println(cost * 1.02);
+        break;
+    case "score":
+        System.out.println(cost * 1.05);
+        break;
+    default:
+        System.out.println("Incorrectly entered data");
+}
     }
 }
