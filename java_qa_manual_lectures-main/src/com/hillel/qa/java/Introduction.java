@@ -65,6 +65,13 @@ public class Introduction {
          //   System.out.println("Ви ввели інші дані!");
        // }
 
+        int n = 0;
+        while (n < 50);
+        System.out.println("QA - це круто!");
+        n++;
+
+
+
         // TODO: Створіть свій клас та виведіть там "QA це круто!"
     }
 }
