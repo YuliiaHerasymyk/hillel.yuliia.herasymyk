@@ -39,20 +39,6 @@ public class HomeWork2 {
     }
 }
 
-       /* Scanner qwe = new Scanner(System.in);
-        int sum = 0;
-        String in = "";
-        System.out.println("Введіть цілі числа або Exit для підрахунку суми та завершення програми: ");
-
-        while (!in.equals("Exit")) {
-            in = qwe.nextLine();
-            if (in.equals("Exit")) {
-                break; }
-
-            sum += Integer.parseInt(in);
-        }
-        System.out.println("Сума: " + sum); */
-
 
 
 
