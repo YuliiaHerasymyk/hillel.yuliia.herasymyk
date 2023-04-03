@@ -1,5 +1,7 @@
 package com.hillel.qa.java.cycles.homework;
 
+import java.util.Scanner;
+
 public class HomeWork2 {
     /**
      * <p style="font-size:12px">
@@ -14,5 +16,44 @@ public class HomeWork2 {
      */
     public static void main(String[] args) {
 
+        Scanner in = new Scanner(System.in);
+        int sum = 0;
+
+        System.out.println("Введіть цілі числа або Exit для підрахунку суми та завершення програми:");
+
+        while (true) {
+            if (in.hasNextInt()) {
+                String str = in.next();
+                sum += Integer.parseInt(str); }
+             else {
+                String str = in.next();
+                if (str.equalsIgnoreCase("Exit")) {
+                    break; }
+                else {
+                    System.out.println("Ви ввели некоректні дані. Введіть ціле число або Exit");
+                }
+            }
+        }
+        System.out.println("Сума: " + sum);
+        in.close();
     }
 }
+
+       /* Scanner qwe = new Scanner(System.in);
+        int sum = 0;
+        String in = "";
+        System.out.println("Введіть цілі числа або Exit для підрахунку суми та завершення програми: ");
+
+        while (!in.equals("Exit")) {
+            in = qwe.nextLine();
+            if (in.equals("Exit")) {
+                break; }
+
+            sum += Integer.parseInt(in);
+        }
+        System.out.println("Сума: " + sum); */
+
+
+
+
+
