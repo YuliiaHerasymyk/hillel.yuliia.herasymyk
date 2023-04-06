@@ -1,9 +1,6 @@
 package ua.ithillel.automation.ui;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class HomeWork {
@@ -46,7 +44,7 @@ public class HomeWork {
         driver.findElement(By.id("signupLastName")).sendKeys("Black");
         Thread.sleep(2000);
 
-        driver.findElement(By.id("signupEmail")).sendKeys("Qwerty50@ukr.net");
+        driver.findElement(By.id("signupEmail")).sendKeys("Qwerty61@ukr.net");
         Thread.sleep(2000);
 
         driver.findElement(By.id("signupPassword")).sendKeys("TestTest23");
@@ -63,7 +61,7 @@ public class HomeWork {
         driver.findElement(By.id("userNavDropdown")).click();
         Thread.sleep(2000);
 
-     //   div app-user-nav nav div a:nth-child(2) адреса кнопки Profile
+
 
         WebElement profileButton = driver.findElement(By.cssSelector("div app-user-nav nav div a:nth-child(2)"));
         profileButton.click();
@@ -71,25 +69,22 @@ public class HomeWork {
 
         driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
         Thread.sleep(2000);
-
 //
 
-        WebElement name = driver.findElement(By.id("editProfileName"));
-        WebElement lastName = driver.findElement(By.id("editProfileLastName"));
 
-        boolean isNameCorrect = name.getAttribute("value").equals("Jack");
-        boolean isLastNameCorrect = lastName.getAttribute("value").equals("Black");
+        WebElement nameField = driver.findElement(By.id("editProfileName"));
+        WebElement lastNameField = driver.findElement(By.id("editProfileLastName"));
 
-        System.out.println(isNameCorrect && isLastNameCorrect);
+        assertArrayEquals(new String[] { "Jack" }, new String[] { nameField.getAttribute("value") });
+        assertArrayEquals(new String[] { "Black" }, new String[] { lastNameField.getAttribute("value") });
 
-
+        
         driver.findElement(By.xpath("//button[@class='close']")).click();
         Thread.sleep(2000);
 //
         driver.findElement(By.id("userNavDropdown")).click();
         Thread.sleep(2000);
 
-      // адреса гаражу кнопки  div app-user-nav a:first-child
 
         WebElement garageButton = driver.findElement(By.cssSelector("div app-user-nav a:first-child"));
         garageButton.click();
@@ -97,8 +92,6 @@ public class HomeWork {
 
         driver.findElement(By.cssSelector(".btn-primary")).click();
         Thread.sleep(2000);
-
-        //   поле Mileage id = addCarMileage
 
         driver.findElement(By.id("addCarMileage")).sendKeys("1");
         Thread.sleep(2000);
@@ -133,10 +126,7 @@ public class HomeWork {
         driver.findElement(By.cssSelector(".btn-danger")).click();
         Thread.sleep(2000);
 
-
     }
-
-
 
     @After
     public void postCondition() {
